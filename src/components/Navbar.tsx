@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/arca-marina-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +19,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <NavLink to="/" className="text-2xl font-bold text-primary hover:text-secondary transition-colors">
-            Arca Marina
+          <NavLink to="/" className="flex items-center hover:opacity-80 transition-opacity">
+            <img src={logo} alt="Arca Marina" className="h-10" />
           </NavLink>
 
           {/* Desktop Navigation */}
