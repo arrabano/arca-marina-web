@@ -7,7 +7,7 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section with Video */}
       <section className="relative h-[600px] flex items-center justify-center text-center overflow-hidden">
-        {/* Video Background - Replace src with your video path */}
+        {/* Video Background */}
         <video 
           autoPlay 
           loop 
@@ -16,8 +16,7 @@ const Home = () => {
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: 'grayscale(100%)' }}
         >
-          <source src="/video/hero-video.mp4" type="video/mp4" />
-          {/* Fallback gradient if video doesn't load */}
+          <source src="/hero-video.mp4" type="video/mp4" />
         </video>
         
         {/* Dark overlay for better text readability */}
