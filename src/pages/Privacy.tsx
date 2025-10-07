@@ -2,7 +2,7 @@ const Privacy = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-secondary text-primary-foreground py-20">
+      <section className="bg-primary text-primary-foreground py-20">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold mb-6 text-center">Privacy Policy</h1>
         </div>

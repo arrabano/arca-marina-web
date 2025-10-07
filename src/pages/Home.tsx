@@ -5,14 +5,24 @@ import { ArrowRight, Fish, Award, Globe } from "lucide-react";
 const Home = () => {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section with Video */}
       <section className="relative h-[600px] flex items-center justify-center text-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent"
-          style={{
-            backgroundImage: "linear-gradient(135deg, hsl(var(--ocean-deep)), hsl(var(--ocean-primary)), hsl(var(--ocean-light)))"
-          }}
-        />
+        {/* Video Background - Replace src with your video path */}
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: 'grayscale(100%)' }}
+        >
+          <source src="/video/hero-video.mp4" type="video/mp4" />
+          {/* Fallback gradient if video doesn't load */}
+        </video>
+        
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/50" />
+        
         <div className="relative z-10 container mx-auto px-4 text-white">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
             Ocean's Finest Fish
@@ -26,7 +36,7 @@ const Home = () => {
                 Explore Products <ArrowRight className="ml-2" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="hero" className="text-lg">
+            <Button asChild size="lg" variant="outline" className="text-lg bg-white/10 text-white border-white hover:bg-white hover:text-black backdrop-blur-sm">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>

@@ -4,7 +4,7 @@ const Sustainability = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-secondary text-primary-foreground py-20">
+      <section className="bg-primary text-primary-foreground py-20">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold mb-6 text-center">Sustainable Fishing</h1>
           <p className="text-xl text-center max-w-3xl mx-auto opacity-90">
