@@ -19,8 +19,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <img src={logo} alt="Arca Marina" className="h-10" />
+          <NavLink to="/" className="flex items-center hover:opacity-80 transition-opacity py-2">
+            <img src={logo} alt="Arca Marina - Ocean's Finest Fish" className="h-12 w-auto" />
           </NavLink>
 
           {/* Desktop Navigation */}
