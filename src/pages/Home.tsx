@@ -43,37 +43,60 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
+      <section className="py-32 bg-gradient-to-b from-background via-muted/30 to-background relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 bg-grid-white/5 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.5))]" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Why Choose Arca Marina
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Industry-leading standards in sustainable seafood sourcing and distribution
+            </p>
+          </div>
+
+          {/* Feature Cards */}
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="group text-center p-8 bg-card rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/5 rounded-2xl mb-6 group-hover:bg-primary/10 transition-colors">
-                <Fish className="w-10 h-10 text-primary" />
+            <div className="group relative text-center p-10 bg-card/50 backdrop-blur-sm rounded-3xl border border-border hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative">
+                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <Fish className="w-12 h-12 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">Premium Quality</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Flash-frozen at sea to preserve natural freshness and premium taste
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-3">Premium Quality</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Flash-frozen at sea to preserve natural freshness and premium taste
-              </p>
             </div>
 
-            <div className="group text-center p-8 bg-card rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/5 rounded-2xl mb-6 group-hover:bg-primary/10 transition-colors">
-                <Award className="w-10 h-10 text-primary" />
+            <div className="group relative text-center p-10 bg-card/50 backdrop-blur-sm rounded-3xl border border-border hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative">
+                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <Award className="w-12 h-12 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">MSC Certified</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  All products meet the highest standards of sustainability and traceability
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-3">MSC Certified</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                All products meet the highest standards of sustainability and traceability
-              </p>
             </div>
 
-            <div className="group text-center p-8 bg-card rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/5 rounded-2xl mb-6 group-hover:bg-primary/10 transition-colors">
-                <Globe className="w-10 h-10 text-primary" />
+            <div className="group relative text-center p-10 bg-card/50 backdrop-blur-sm rounded-3xl border border-border hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative">
+                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <Globe className="w-12 h-12 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">Global Reach</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Trusted supplier with reliable exports worldwide
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-3">Global Reach</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Trusted supplier with reliable exports worldwide
-              </p>
             </div>
           </div>
         </div>
