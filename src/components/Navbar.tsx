@@ -15,9 +15,9 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
+    <nav className="fixed top-0 w-full bg-black/30 backdrop-blur-md border-b border-white/10 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <NavLink to="/" className="flex items-center hover:opacity-80 transition-opacity py-2">
             <img src={logo} alt="Arca Marina - Ocean's Finest Fish" className="h-12 w-auto" />
@@ -31,8 +31,8 @@ const Navbar = () => {
                 to={link.to}
                 end={link.to === "/"}
                 className={({ isActive }) =>
-                  `text-sm font-medium transition-colors hover:text-primary ${
-                    isActive ? "text-primary" : "text-foreground/70"
+                  `text-sm font-semibold transition-all duration-300 hover:text-white ${
+                    isActive ? "text-white" : "text-white/80"
                   }`
                 }
               >
@@ -44,7 +44,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+            className="md:hidden p-2 text-white hover:text-white/80 transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -53,7 +53,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className="md:hidden py-4 border-t border-white/10 bg-black/90 backdrop-blur-md">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <NavLink
@@ -62,8 +62,8 @@ const Navbar = () => {
                   end={link.to === "/"}
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
-                    `text-sm font-medium transition-colors hover:text-primary ${
-                      isActive ? "text-primary" : "text-foreground/70"
+                    `text-sm font-semibold transition-colors hover:text-white ${
+                      isActive ? "text-white" : "text-white/80"
                     }`
                   }
                 >

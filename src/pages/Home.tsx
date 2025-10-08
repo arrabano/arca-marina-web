@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Video */}
-      <section className="relative h-[600px] flex items-center justify-center text-center overflow-hidden">
+      <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
         {/* Video Background */}
         <video 
           autoPlay 
