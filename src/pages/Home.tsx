@@ -43,35 +43,35 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-muted">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-background rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                <Fish className="w-8 h-8 text-primary" />
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="group text-center p-8 bg-card rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/5 rounded-2xl mb-6 group-hover:bg-primary/10 transition-colors">
+                <Fish className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Premium Quality</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold mb-3">Premium Quality</h3>
+              <p className="text-muted-foreground leading-relaxed">
                 Flash-frozen at sea to preserve natural freshness and premium taste
               </p>
             </div>
 
-            <div className="text-center p-6 bg-background rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                <Award className="w-8 h-8 text-primary" />
+            <div className="group text-center p-8 bg-card rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/5 rounded-2xl mb-6 group-hover:bg-primary/10 transition-colors">
+                <Award className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-2">MSC Certified</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold mb-3">MSC Certified</h3>
+              <p className="text-muted-foreground leading-relaxed">
                 All products meet the highest standards of sustainability and traceability
               </p>
             </div>
 
-            <div className="text-center p-6 bg-background rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                <Globe className="w-8 h-8 text-primary" />
+            <div className="group text-center p-8 bg-card rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/5 rounded-2xl mb-6 group-hover:bg-primary/10 transition-colors">
+                <Globe className="w-10 h-10 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Global Reach</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold mb-3">Global Reach</h3>
+              <p className="text-muted-foreground leading-relaxed">
                 Trusted supplier with reliable exports worldwide
               </p>
             </div>
