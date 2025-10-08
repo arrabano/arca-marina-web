@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <NavLink to="/" className="flex items-center hover:opacity-80 transition-opacity py-2">
-            <img src={logo} alt="Arca Marina - Ocean's Finest Fish" className="h-12 w-auto" />
+            <img src={logo} alt="Arca Marina - Ocean's Finest Fish" className="h-12 w-auto brightness-0 invert" />
           </NavLink>
 
           {/* Desktop Navigation */}
@@ -31,7 +31,7 @@ const Navbar = () => {
                 to={link.to}
                 end={link.to === "/"}
                 className={({ isActive }) =>
-                  `text-sm font-semibold transition-all duration-300 hover:text-white ${
+                  `text-base font-semibold transition-all duration-300 hover:text-white ${
                     isActive ? "text-white" : "text-white/80"
                   }`
                 }
@@ -62,7 +62,7 @@ const Navbar = () => {
                   end={link.to === "/"}
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
-                    `text-sm font-semibold transition-colors hover:text-white ${
+                    `text-base font-semibold transition-colors hover:text-white ${
                       isActive ? "text-white" : "text-white/80"
                     }`
                   }
