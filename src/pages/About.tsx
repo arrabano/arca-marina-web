@@ -1,13 +1,23 @@
 import { Award, Globe, Shield, Users } from "lucide-react";
+import coastalLandscape from "@/assets/coastal-landscape.jpg";
 
 const About = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-6 text-center">About Arca Marina</h1>
-          <p className="text-xl text-center max-w-3xl mx-auto opacity-90">
+      <section className="relative py-32 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${coastalLandscape})` }}
+        />
+        
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/60" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-5xl font-bold mb-6 text-center text-white">About Arca Marina</h1>
+          <p className="text-xl text-center max-w-3xl mx-auto text-white/90">
             A global seafood trading company dedicated to bringing the ocean's finest fish to tables around the world
           </p>
         </div>
