@@ -2,49 +2,63 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Fish, Award, Snowflake } from "lucide-react";
 import productsFish from "@/assets/products-fish.jpg";
+import atlanticCod from "@/assets/product-atlantic-cod.jpg";
+import atlanticHaddock from "@/assets/product-atlantic-haddock.jpg";
+import pinkSalmon from "@/assets/product-pink-salmon.jpg";
+import chumSalmon from "@/assets/product-chum-salmon.jpg";
+import redKingCrab from "@/assets/product-red-king-crab.jpg";
+import redCaviar from "@/assets/product-red-caviar.jpg";
+import blackCaviar from "@/assets/product-black-caviar.jpg";
 
 const products = [
   {
     name: "Atlantic Cod",
     description: "Caught in the icy waters of the Barents Sea",
     details: "Perfect for fillets, salted cod, and traditional bacalao",
-    certification: "MSC-certified"
+    certification: "MSC-certified",
+    image: atlanticCod
   },
   {
     name: "Atlantic Haddock",
     description: "Mild, flaky white fish ideal for frying and grilling",
     details: "MSC-certified fisheries",
-    certification: "MSC-certified"
+    certification: "MSC-certified",
+    image: atlanticHaddock
   },
   {
     name: "Pink Salmon",
     description: "Wild-caught in the Pacific",
     details: "Available as whole fish, fillets, or canned",
-    certification: "Sustainable"
+    certification: "Sustainable",
+    image: pinkSalmon
   },
   {
     name: "Chum Salmon",
     description: "Renowned for its lean texture and rich flavor",
     details: "Frozen at sea to preserve freshness",
-    certification: "Wild-caught"
+    certification: "Wild-caught",
+    image: chumSalmon
   },
   {
     name: "Red King Crab",
     description: "Harvested from the nutrient-rich waters of the Far East",
     details: "Live, frozen, or cooked sections",
-    certification: "Premium"
+    certification: "Premium",
+    image: redKingCrab
   },
   {
     name: "Red Caviar (Salmon Roe)",
     description: "Bright, delicate pearls with balanced brininess",
     details: "Sourced from sustainable salmon fisheries",
-    certification: "Sustainable"
+    certification: "Sustainable",
+    image: redCaviar
   },
   {
     name: "Black Caviar (Sturgeon)",
     description: "Luxurious, buttery Caspian Sea caviar",
     details: "CITES-certified and traceable",
-    certification: "CITES-certified"
+    certification: "CITES-certified",
+    image: blackCaviar
   }
 ];
 
@@ -93,23 +107,34 @@ const Products = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Our Core Products</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product) => (
-              <Card key={product.name} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <CardTitle className="text-xl mb-2">{product.name}</CardTitle>
-                      <Badge variant="secondary" className="mb-2">
-                        <Award className="w-3 h-3 mr-1" />
-                        {product.certification}
-                      </Badge>
+              <Card key={product.name} className="hover:shadow-lg transition-shadow overflow-hidden relative">
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${product.image})` }}
+                />
+                {/* Overlay for text readability */}
+                <div className="absolute inset-0 bg-white/85 dark:bg-black/75" />
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <CardHeader>
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <CardTitle className="text-xl mb-2">{product.name}</CardTitle>
+                        <Badge variant="secondary" className="mb-2">
+                          <Award className="w-3 h-3 mr-1" />
+                          {product.certification}
+                        </Badge>
+                      </div>
+                      <Fish className="w-8 h-8 text-primary" />
                     </div>
-                    <Fish className="w-8 h-8 text-primary" />
-                  </div>
-                  <CardDescription className="text-base">{product.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">{product.details}</p>
-                </CardContent>
+                    <CardDescription className="text-base">{product.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">{product.details}</p>
+                  </CardContent>
+                </div>
               </Card>
             ))}
           </div>
