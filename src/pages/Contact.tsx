@@ -1,14 +1,24 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import contactOcean from "@/assets/contact-ocean.jpg";
 
 const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-6 text-center">Contact Us</h1>
-          <p className="text-xl text-center max-w-3xl mx-auto opacity-90">
+      <section className="relative py-32 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${contactOcean})` }}
+        />
+        
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/60" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-5xl font-bold mb-6 text-center text-white">Contact Us</h1>
+          <p className="text-xl text-center max-w-3xl mx-auto text-white/90">
             Get in touch with our team to discuss your seafood needs
           </p>
         </div>
