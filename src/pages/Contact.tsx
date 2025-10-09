@@ -25,7 +25,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 bg-ocean-blue-light">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <Card className="shadow-xl">
@@ -90,7 +90,7 @@ const Contact = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-b from-background to-ocean-blue-light">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Start Your Order?</h2>

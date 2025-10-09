@@ -38,12 +38,6 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
     
-    /* Ocean Blue Color System - #0047BB */
-    --ocean-blue: 217 100% 37%;
-    --ocean-blue-light: 217 100% 96%;
-    --ocean-blue-dark: 217 100% 25%;
-    --ocean-blue-foreground: 0 0% 100%;
-    
     --shadow-elegant: 0 10px 40px -10px hsl(0 0% 0% / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -76,12 +70,6 @@ All colors MUST be HSL.
     --border: 0 0% 20%;
     --input: 0 0% 20%;
     --ring: 0 0% 100%;
-    
-    /* Ocean Blue for dark mode */
-    --ocean-blue: 217 100% 45%;
-    --ocean-blue-light: 217 100% 15%;
-    --ocean-blue-dark: 217 100% 55%;
-    --ocean-blue-foreground: 0 0% 100%;
   }
 }
 

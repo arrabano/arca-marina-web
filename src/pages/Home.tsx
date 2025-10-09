@@ -44,7 +44,7 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-32 bg-gradient-to-b from-ocean-blue-light via-background to-background relative overflow-hidden">
+      <section className="py-32 bg-gradient-to-b from-background via-muted/30 to-background relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute inset-0 bg-grid-white/5 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.5))]" />
         

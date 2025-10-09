@@ -24,7 +24,7 @@ const About = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 bg-ocean-blue-light">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="prose prose-lg max-w-none">
@@ -52,7 +52,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 bg-gradient-to-b from-background to-ocean-blue-light">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
