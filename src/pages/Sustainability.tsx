@@ -24,7 +24,7 @@ const Sustainability = () => {
       </section>
 
       {/* Introduction */}
-      <section className="py-16">
+      <section className="py-16 bg-ocean-blue-light">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <p className="text-xl leading-relaxed">
@@ -37,7 +37,7 @@ const Sustainability = () => {
       </section>
 
       {/* Partner Checklist */}
-      <section className="py-16 bg-muted">
+      <section className="py-16 bg-gradient-to-b from-background to-ocean-blue-light">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Our Partner Check-list</h2>
           <div className="max-w-5xl mx-auto space-y-8">
@@ -121,7 +121,7 @@ const Sustainability = () => {
       </section>
 
       {/* Why It Matters */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      <section className="py-16 bg-ocean-blue text-ocean-blue-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">Why It Matters</h2>
