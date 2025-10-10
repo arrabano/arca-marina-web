@@ -9,11 +9,13 @@ const Home = () => {
       {/* Hero Section with Video */}
       <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
         {/* Video Background */}
-        <video 
-          autoPlay 
-          loop 
-          muted 
+        <video
+          autoPlay
+          loop
+          muted
           playsInline
+          preload="metadata"
+          poster="/placeholder.svg"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: 'grayscale(100%)' }}
         >
@@ -106,9 +108,13 @@ const Home = () => {
       {/* CTA Section */}
       <section className="relative py-32 overflow-hidden">
         {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${norwayLandscape})` }}
+        <img
+          src={norwayLandscape}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+          sizes="100vw"
         />
         
         {/* Dark overlay for text readability */}
