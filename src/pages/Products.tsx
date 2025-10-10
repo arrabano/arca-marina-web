@@ -114,7 +114,7 @@ const Products = () => {
                   style={{ backgroundImage: `url(${product.image})` }}
                 />
                 {/* Overlay for text readability */}
-                <div className="absolute inset-0 bg-white/95 dark:bg-black/90" />
+                <div className="absolute inset-0 bg-white/85 dark:bg-black/75" />
                 
                 {/* Content */}
                 <div className="relative z-10">
@@ -127,6 +127,7 @@ const Products = () => {
                           {product.certification}
                         </Badge>
                       </div>
+                      <Fish className="w-8 h-8 text-primary" />
                     </div>
                     <CardDescription className="text-base">{product.description}</CardDescription>
                   </CardHeader>
