@@ -1,5 +1,5 @@
 import { Leaf, Search, Heart, Users } from "lucide-react";
-import fishingVessel from "@/assets/fishing-vessel.jpg";
+import sustainabilityVessel from "@/assets/sustainability-vessel.jpg";
 
 const Sustainability = () => {
   return (
@@ -9,7 +9,7 @@ const Sustainability = () => {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${fishingVessel})` }}
+          style={{ backgroundImage: `url(${sustainabilityVessel})` }}
         />
         
         {/* Dark overlay for text readability */}
