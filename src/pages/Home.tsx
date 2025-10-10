@@ -1,26 +1,62 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Fish, Award, Globe } from "lucide-react";
+import { useEffect, useState } from "react";
 import norwayLandscape from "@/assets/norway-landscape.jpg";
 
 const Home = () => {
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mediaQuery.matches) return; // Respect user preference
+
+    const enableVideo = () => {
+      setShouldLoadVideo(true);
+      window.removeEventListener("pointerdown", enableVideo);
+      window.removeEventListener("keydown", enableVideo);
+      window.removeEventListener("touchstart", enableVideo);
+    };
+
+    window.addEventListener("pointerdown", enableVideo, { once: true });
+    window.addEventListener("keydown", enableVideo, { once: true });
+    window.addEventListener("touchstart", enableVideo, { once: true });
+
+    return () => {
+      window.removeEventListener("pointerdown", enableVideo);
+      window.removeEventListener("keydown", enableVideo);
+      window.removeEventListener("touchstart", enableVideo);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section with Video */}
       <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
-        {/* Video Background */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          poster="/placeholder.svg"
+        {/* LCP-friendly poster image (no autoplay) */}
+        <img
+          src="/placeholder.svg"
+          alt=""
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: 'grayscale(100%)' }}
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+        />
+
+        {/* Defer loading the video until first interaction */}
+        {shouldLoadVideo && (
+          <video
+            muted
+            loop
+            playsInline
+            preload="none"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ filter: 'grayscale(100%)' }}
+            // We intentionally do NOT set autoPlay to avoid autoplay before interaction
+          >
+            <source src="/hero-video.mp4" type="video/mp4" />
+          </video>
+        )}
         
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/50" />
