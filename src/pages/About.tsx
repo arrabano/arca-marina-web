@@ -7,9 +7,14 @@ const About = () => {
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
         {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${coastalLandscape})` }}
+        <img
+          src={coastalLandscape}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+          sizes="100vw"
         />
         
         {/* Dark overlay for text readability */}

@@ -68,9 +68,13 @@ const Products = () => {
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
         {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${productsFish})` }}
+        <img
+          src={productsFish}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
         />
         
         {/* Dark overlay for text readability */}
@@ -109,9 +113,13 @@ const Products = () => {
             {products.map((product) => (
               <Card key={product.name} className="hover:shadow-lg transition-shadow overflow-hidden relative">
                 {/* Background Image */}
-                <div 
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${product.image})` }}
+                <img
+                  src={product.image}
+                  alt=""
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                 />
                 {/* Overlay for text readability */}
                 <div className="absolute inset-0 bg-white/85 dark:bg-black/75" />
