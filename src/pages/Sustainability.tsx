@@ -45,80 +45,100 @@ const Sustainability = () => {
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Our Partner Check-list</h2>
-          <div className="max-w-5xl mx-auto space-y-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Science-Based Harvesting */}
-            <div className="bg-background p-8 rounded-lg shadow-lg">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full">
-                    <Search className="w-6 h-6 text-primary" />
-                  </div>
+            <div className="bg-background p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex flex-col items-center text-center">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-[#0047BB]/10 rounded-full mb-6">
+                  <Search className="w-10 h-10 text-[#0047BB]" />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">1. Science-Based Harvesting</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Collaboration with marine biologists to set catch limits</li>
-                    <li>• Prioritization of seasonal fishing to protect spawning grounds</li>
-                    <li>• Usage of selective gear to minimize bycatch</li>
-                  </ul>
-                </div>
+                <h3 className="text-2xl font-bold mb-6 text-[#0047BB]">1. Science-Based Harvesting</h3>
+                <ul className="space-y-3 text-left w-full">
+                  <li className="flex items-start gap-3">
+                    <span className="inline-block w-2 h-2 rounded-full bg-[#0047BB] mt-2 flex-shrink-0"></span>
+                    <span className="text-foreground/80">Collaboration with <strong>marine biologists</strong> to set catch limits</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="inline-block w-2 h-2 rounded-full bg-[#0047BB] mt-2 flex-shrink-0"></span>
+                    <span className="text-foreground/80">Prioritization of <strong>seasonal fishing</strong> to protect spawning grounds</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="inline-block w-2 h-2 rounded-full bg-[#0047BB] mt-2 flex-shrink-0"></span>
+                    <span className="text-foreground/80">Usage of <strong>selective gear</strong> to minimize bycatch</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
             {/* Full-Supply Chain Traceability */}
-            <div className="bg-background p-8 rounded-lg shadow-lg">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full">
-                    <Leaf className="w-6 h-6 text-primary" />
-                  </div>
+            <div className="bg-background p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex flex-col items-center text-center">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-cyan-600/10 rounded-full mb-6">
+                  <Leaf className="w-10 h-10 text-cyan-600" />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">2. Full-Supply Chain Traceability</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Blockchain-tracked from vessel to vendor</li>
-                    <li>• MSC/ASC certifications where applicable</li>
-                    <li>• Transparent sourcing documentation</li>
-                  </ul>
-                </div>
+                <h3 className="text-2xl font-bold mb-6 text-cyan-600">2. Full-Supply Chain Traceability</h3>
+                <ul className="space-y-3 text-left w-full">
+                  <li className="flex items-start gap-3">
+                    <span className="inline-block w-2 h-2 rounded-full bg-cyan-600 mt-2 flex-shrink-0"></span>
+                    <span className="text-foreground/80"><strong>Blockchain-tracked</strong> from vessel to vendor</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="inline-block w-2 h-2 rounded-full bg-cyan-600 mt-2 flex-shrink-0"></span>
+                    <span className="text-foreground/80"><strong>MSC/ASC certifications</strong> where applicable</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="inline-block w-2 h-2 rounded-full bg-cyan-600 mt-2 flex-shrink-0"></span>
+                    <span className="text-foreground/80"><strong>Transparent sourcing</strong> documentation</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
             {/* Ecosystem Protection */}
-            <div className="bg-background p-8 rounded-lg shadow-lg">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full">
-                    <Heart className="w-6 h-6 text-primary" />
-                  </div>
+            <div className="bg-background p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex flex-col items-center text-center">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-emerald-500/10 rounded-full mb-6">
+                  <Heart className="w-10 h-10 text-emerald-500" />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">3. Ecosystem Protection</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Avoid fishing in vulnerable marine areas</li>
-                    <li>• Participate in habitat restoration initiatives</li>
-                    <li>• Strict ban on illegal, unreported fishing (IUU)</li>
-                  </ul>
-                </div>
+                <h3 className="text-2xl font-bold mb-6 text-emerald-500">3. Ecosystem Protection</h3>
+                <ul className="space-y-3 text-left w-full">
+                  <li className="flex items-start gap-3">
+                    <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span>
+                    <span className="text-foreground/80">Avoid fishing in <strong>vulnerable marine areas</strong></span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span>
+                    <span className="text-foreground/80">Participate in <strong>habitat restoration</strong> initiatives</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span>
+                    <span className="text-foreground/80">Strict ban on <strong>illegal, unreported fishing</strong> (IUU)</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
             {/* Ethical Fleet Operations */}
-            <div className="bg-background p-8 rounded-lg shadow-lg">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full">
-                    <Users className="w-6 h-6 text-primary" />
-                  </div>
+            <div className="bg-background p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex flex-col items-center text-center">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-amber-500/10 rounded-full mb-6">
+                  <Users className="w-10 h-10 text-amber-500" />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">4. Ethical Fleet Operations</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Modern vessels with reduced fuel consumption</li>
-                    <li>• Waste reduction programs onboard</li>
-                    <li>• Fair labor practices across all operations</li>
-                  </ul>
-                </div>
+                <h3 className="text-2xl font-bold mb-6 text-amber-500">4. Ethical Fleet Operations</h3>
+                <ul className="space-y-3 text-left w-full">
+                  <li className="flex items-start gap-3">
+                    <span className="inline-block w-2 h-2 rounded-full bg-amber-500 mt-2 flex-shrink-0"></span>
+                    <span className="text-foreground/80">Modern vessels with <strong>reduced fuel consumption</strong></span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="inline-block w-2 h-2 rounded-full bg-amber-500 mt-2 flex-shrink-0"></span>
+                    <span className="text-foreground/80"><strong>Waste reduction programs</strong> onboard</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="inline-block w-2 h-2 rounded-full bg-amber-500 mt-2 flex-shrink-0"></span>
+                    <span className="text-foreground/80"><strong>Fair labor practices</strong> across all operations</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
