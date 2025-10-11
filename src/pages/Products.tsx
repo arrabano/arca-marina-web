@@ -127,13 +127,13 @@ const Products = () => {
                   <img
                     src={product.image}
                     alt=""
-                    className="absolute inset-0 w-full h-full object-cover blur-[2px]"
+                    className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
                     decoding="async"
                     sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   />
                   {/* Enhanced overlay for text readability */}
-                  <div className="absolute inset-0 bg-white/90 dark:bg-black/80 backdrop-blur-sm" />
+                  <div className="absolute inset-0 bg-white/75 dark:bg-black/70" />
                   
                   {/* Content */}
                   <div className="relative z-10">
@@ -143,10 +143,10 @@ const Products = () => {
                         <Award className="w-3.5 h-3.5 mr-1.5" />
                         {product.certification}
                       </Badge>
-                      <CardDescription className="text-base text-muted-foreground/70">{product.description}</CardDescription>
+                      <CardDescription className="text-base text-foreground/90">{product.description}</CardDescription>
                     </CardHeader>
                     <CardContent className="pt-0">
-                      <p className="text-sm text-muted-foreground/60">{product.details}</p>
+                      <p className="text-sm text-foreground/80">{product.details}</p>
                     </CardContent>
                   </div>
                 </Card>
