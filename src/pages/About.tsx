@@ -29,29 +29,32 @@ const About = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-16">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div className="prose prose-lg max-w-none">
-              <p className="text-lg leading-relaxed">
-                <strong className="text-primary">Arca Marina</strong> is a global seafood trading company dedicated to bringing the{" "}
-                <strong>ocean's finest fish</strong> to tables around the world. Our mission is to promote health and well-being by 
-                delivering pure, sustainably sourced seafood—exactly as nature provides it, with no compromises on quality or integrity.
-              </p>
+          <div className="max-w-[750px] mx-auto space-y-8">
+            <p className="text-[17px] md:text-[18px] leading-[1.7] md:leading-[1.75]">
+              <strong className="font-semibold text-foreground">Arca Marina</strong> is a global seafood trading company dedicated to bringing the ocean's finest fish to tables around the world.
+            </p>
 
-              <p className="text-lg leading-relaxed">
-                Through strategic global partnerships, Arca Marina has rapidly established itself as a trusted supplier, renowned for 
-                our unwavering commitment to <strong>ethical practices, sustainability and complete traceability</strong> throughout 
-                the supply chain. We work exclusively with fisheries and producers who share our values, ensuring every product meets 
-                the highest standards of excellence.
-              </p>
+            <p className="text-[17px] md:text-[18px] leading-[1.7] md:leading-[1.75]">
+              Our mission is to promote health and well-being by delivering pure, sustainably sourced seafood—exactly as nature provides it, with <strong className="font-semibold text-foreground">no compromises on quality or integrity.</strong>
+            </p>
 
-              <p className="text-lg leading-relaxed">
-                From wild-caught fish to responsibly farmed shellfish, Arca Marina offers a diverse selection of premium seafood—processed 
-                at sea or in state-of-the-art onshore facilities. Our team brings together expertise from across the globe, and our 
-                operations span the world's most abundant fishing regions, guaranteeing freshness and reliability for customers everywhere.
-              </p>
-            </div>
+            <p className="text-[17px] md:text-[18px] leading-[1.7] md:leading-[1.75]">
+              Through strategic global partnerships, Arca Marina has rapidly established itself as a trusted supplier, renowned for our unwavering commitment to <strong className="font-semibold text-foreground">ethical practices, sustainability and complete traceability</strong> throughout the supply chain.
+            </p>
+
+            <p className="text-[17px] md:text-[18px] leading-[1.7] md:leading-[1.75]">
+              We work exclusively with fisheries and producers who share our values, ensuring every product meets the highest standards of excellence.
+            </p>
+
+            <p className="text-[17px] md:text-[18px] leading-[1.7] md:leading-[1.75]">
+              From wild-caught fish to responsibly farmed shellfish, Arca Marina offers a <strong className="font-semibold text-foreground">diverse selection of premium seafood</strong>—processed at sea or in state-of-the-art onshore facilities.
+            </p>
+
+            <p className="text-[17px] md:text-[18px] leading-[1.7] md:leading-[1.75]">
+              Our team brings together expertise from across the globe, and our operations span the world's most abundant fishing regions, guaranteeing freshness and reliability for customers everywhere.
+            </p>
           </div>
         </div>
       </section>
