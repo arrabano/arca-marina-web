@@ -110,41 +110,48 @@ const Products = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Our Core Products</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((product) => (
-              <Card key={product.name} className="hover:shadow-lg transition-shadow overflow-hidden relative">
-                {/* Background Image */}
-                <img
-                  src={product.image}
-                  alt=""
-                  className="absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                />
-                {/* Overlay for text readability */}
-                <div className="absolute inset-0 bg-white/85 dark:bg-black/75" />
-                
-                {/* Content */}
-                <div className="relative z-10">
-                  <CardHeader>
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <CardTitle className="text-xl mb-2">{product.name}</CardTitle>
-                        <Badge variant="secondary" className="mb-2">
-                          <Award className="w-3 h-3 mr-1" />
-                          {product.certification}
-                        </Badge>
-                      </div>
-                      <Fish className="w-8 h-8 text-primary" />
-                    </div>
-                    <CardDescription className="text-base">{product.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">{product.details}</p>
-                  </CardContent>
-                </div>
-              </Card>
-            ))}
+            {products.map((product) => {
+              const getBadgeVariant = (cert: string) => {
+                if (cert.toLowerCase().includes('sustainable')) return 'sustainable';
+                if (cert.toLowerCase().includes('msc') || cert.toLowerCase().includes('cites')) return 'certified';
+                if (cert.toLowerCase().includes('premium')) return 'premium';
+                return 'wildcaught';
+              };
+
+              return (
+                <Card 
+                  key={product.name} 
+                  className="overflow-hidden relative transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1"
+                >
+                  {/* Background Image */}
+                  <img
+                    src={product.image}
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-cover blur-[2px]"
+                    loading="lazy"
+                    decoding="async"
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  />
+                  {/* Enhanced overlay for text readability */}
+                  <div className="absolute inset-0 bg-white/90 dark:bg-black/80 backdrop-blur-sm" />
+                  
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-2xl font-bold mb-3">{product.name}</CardTitle>
+                      <Badge variant={getBadgeVariant(product.certification)} className="mb-3 w-fit">
+                        <Award className="w-3.5 h-3.5 mr-1.5" />
+                        {product.certification}
+                      </Badge>
+                      <CardDescription className="text-base text-muted-foreground/70">{product.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <p className="text-sm text-muted-foreground/60">{product.details}</p>
+                    </CardContent>
+                  </div>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
