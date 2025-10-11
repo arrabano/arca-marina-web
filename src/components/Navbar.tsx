@@ -27,8 +27,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center hover:opacity-80 transition-opacity py-2">
-            <div className="h-12 w-36 flex items-center">
+          <NavLink to="/" className="flex items-center hover:opacity-80 transition-opacity">
+            <div className="h-14 w-40 md:h-16 md:w-44 flex items-center">
               <img
                 src={logo}
                 alt="Arca Marina - Ocean's Finest Fish"
