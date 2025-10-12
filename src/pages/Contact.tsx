@@ -33,7 +33,7 @@ const Contact = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="shadow-xl">
+            <Card className="card-premium">
               <CardHeader>
                 <CardTitle className="text-3xl">Head Office</CardTitle>
                 <CardDescription className="text-xl">Arca Marina, LLC.</CardDescription>

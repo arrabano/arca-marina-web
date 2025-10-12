@@ -121,7 +121,7 @@ const Products = () => {
               return (
                 <Card 
                   key={product.name} 
-                  className="overflow-hidden relative transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1"
+                  className="overflow-hidden relative card-premium"
                 >
                   {/* Background Image */}
                   <img

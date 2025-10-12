@@ -38,6 +38,9 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
     
+    /* Brand color for premium interactions */
+    --brand-blue: 216 100% 37%;
+    
     --shadow-elegant: 0 10px 40px -10px hsl(0 0% 0% / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -80,5 +83,16 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Premium card hover effect - unified across all product cards */
+  .card-premium {
+    @apply border border-[#E5E7EB] shadow-sm transition-all duration-300 ease-out;
+  }
+  
+  .card-premium:hover {
+    @apply -translate-y-1.5 border-[#0047BB] shadow-[0_4px_20px_rgba(0,71,187,0.25)];
   }
 }
