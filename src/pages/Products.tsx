@@ -121,7 +121,7 @@ const Products = () => {
               return (
                 <Card 
                   key={product.name} 
-                  className="overflow-hidden relative border border-border shadow-sm transition-all duration-300 ease-out hover:border-[#0047BB] hover:shadow-[0_4px_20px_rgba(0,71,187,0.25)] hover:-translate-y-1.5"
+                  className="overflow-hidden relative transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1"
                 >
                   {/* Background Image */}
                   <img
