@@ -16,8 +16,11 @@ const Home = () => {
           playsInline
           preload="auto"
           poster="/hero-poster.jpg"
+          disablePictureInPicture
+          disableRemotePlayback
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: 'grayscale(100%)' }}
+          webkit-playsinline="true"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
