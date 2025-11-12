@@ -14,8 +14,8 @@ const Home = () => {
           loop
           muted
           playsInline
-          preload="metadata"
-          poster="/placeholder.svg"
+          preload="auto"
+          poster="/hero-poster.jpg"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: 'grayscale(100%)' }}
         >
