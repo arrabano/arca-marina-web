@@ -5,7 +5,7 @@ import norwayLandscape from "@/assets/norway-landscape.jpg";
 
 const Home = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black">
       {/* Hero Section with Video */}
       <section className="relative h-screen flex items-center justify-center text-center overflow-hidden bg-black">
         {/* Video Background */}
