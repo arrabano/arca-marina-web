@@ -36,12 +36,12 @@ const Home = () => {
             Premium sustainably sourced seafood from pristine Arctic and Pacific waters
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="secondary" className="text-lg">
+            <Button asChild size="lg" variant="brand-filled" className="text-lg rounded-xl px-8">
               <Link to="/products">
                 Explore Products <ArrowRight className="ml-2" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-lg bg-white/10 text-white border-white hover:bg-white hover:text-black backdrop-blur-sm">
+            <Button asChild size="lg" variant="brand-outline" className="text-lg rounded-xl px-8">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
