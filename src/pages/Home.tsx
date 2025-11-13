@@ -49,7 +49,7 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-32 bg-gradient-to-b from-background via-muted/30 to-background relative overflow-hidden">
+      <section className="py-32 relative overflow-hidden bg-white" style={{ backgroundColor: 'hsl(0 0% 100%)' }}>
         {/* Decorative background elements */}
         <div className="absolute inset-0 bg-grid-white/5 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.5))]" />
         
