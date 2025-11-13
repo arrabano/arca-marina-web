@@ -157,40 +157,40 @@ const Products = () => {
       </section>
 
       {/* Why Choose Section */}
-      <section className="py-16 bg-white text-foreground">
+      <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Why Choose Arca Marina?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-muted rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mb-4">
                 <Fish className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold mb-2">Full Traceability</h3>
-              <p className="text-muted-foreground">From ocean to table</p>
+              <p className="opacity-90">From ocean to table</p>
             </div>
 
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-muted rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mb-4">
                 <Award className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold mb-2">Sustainable Practices</h3>
-              <p className="text-muted-foreground">MSC-certified fisheries | FSSC-certified production | HACCP practices</p>
+              <p className="opacity-90">MSC-certified fisheries | FSSC-certified production | HACCP practices</p>
             </div>
 
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-muted rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mb-4">
                 <Snowflake className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold mb-2">Flash Frozen</h3>
-              <p className="text-muted-foreground">Preserves freshness and quality</p>
+              <p className="opacity-90">Preserves freshness and quality</p>
             </div>
 
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-muted rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mb-4">
                 <Fish className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold mb-2">Custom Solutions</h3>
-              <p className="text-muted-foreground">Tailored processing and packaging</p>
+              <p className="opacity-90">Tailored processing and packaging</p>
             </div>
           </div>
         </div>
