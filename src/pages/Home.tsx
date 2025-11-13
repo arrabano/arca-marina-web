@@ -11,16 +11,16 @@ const Home = () => {
         {/* Video Background */}
         <video
           autoPlay
-          loop
           muted
           playsInline
+          loop
           preload="auto"
           poster="/hero-poster.jpg"
           disablePictureInPicture
           disableRemotePlayback
+          webkit-playsinline="true"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: 'grayscale(100%)' }}
-          webkit-playsinline="true"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
