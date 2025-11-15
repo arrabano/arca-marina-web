@@ -55,63 +55,33 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 w-full bg-black/30 backdrop-blur-md border-b border-white/10 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <NavLink to="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <div className="h-14 w-40 md:h-16 md:w-44 flex items-center">
-              <img
-                src={logo}
-                alt="Arca Marina - Ocean's Finest Fish"
-                className="w-full h-full object-contain brightness-0 invert"
-                loading="eager"
-                decoding="sync"
-                fetchPriority="high"
-              />
-            </div>
-          </NavLink>
+    <>
+      <nav className="fixed top-0 w-full bg-black/30 backdrop-blur-md border-b border-white/10 z-50">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <NavLink to="/" className="flex items-center hover:opacity-80 transition-opacity">
+              <div className="h-14 w-40 md:h-16 md:w-44 flex items-center">
+                <img
+                  src={logo}
+                  alt="Arca Marina - Ocean's Finest Fish"
+                  className="w-full h-full object-contain brightness-0 invert"
+                  loading="eager"
+                  decoding="sync"
+                  fetchPriority="high"
+                />
+              </div>
+            </NavLink>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {NAV_LINKS.map((link) => (
-              <NavLink
-                key={link.to}
-                to={link.to}
-                end={link.to === "/"}
-                className={({ isActive }) =>
-                  `text-base font-semibold transition-all duration-300 hover:text-white ${
-                    isActive ? "text-white" : "text-white/80"
-                  }`
-                }
-              >
-                {link.label}
-              </NavLink>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={handleToggle}
-            className="md:hidden p-2 text-white hover:text-white/80 transition-colors"
-            aria-label="Toggle menu"
-          >
-            <TwoLineIcon isOpen={isOpen} />
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden py-4 border-t border-white/10 bg-black/90 backdrop-blur-md">
-            <div className="flex flex-col space-y-4">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
               {NAV_LINKS.map((link) => (
                 <NavLink
                   key={link.to}
                   to={link.to}
                   end={link.to === "/"}
-                  onClick={handleClose}
                   className={({ isActive }) =>
-                    `text-base font-semibold transition-colors hover:text-white ${
+                    `text-base font-semibold transition-all duration-300 hover:text-white ${
                       isActive ? "text-white" : "text-white/80"
                     }`
                   }
@@ -120,10 +90,47 @@ const Navbar = () => {
                 </NavLink>
               ))}
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={handleToggle}
+              className="md:hidden p-2 text-white hover:text-white/80 transition-colors z-[60]"
+              aria-label="Toggle menu"
+            >
+              <TwoLineIcon isOpen={isOpen} />
+            </button>
           </div>
-        )}
+        </div>
+      </nav>
+
+      {/* Full-Screen Mobile Navigation */}
+      <div
+        className={`fixed inset-0 bg-background z-40 md:hidden transition-transform duration-500 ease-out ${
+          isOpen ? "translate-y-0" : "-translate-y-full"
+        }`}
+        style={{ paddingTop: "5rem" }}
+      >
+        <div className="container mx-auto px-8 h-full flex flex-col justify-start pt-12">
+          <nav className="flex flex-col space-y-8">
+            {NAV_LINKS.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                end={link.to === "/"}
+                onClick={handleClose}
+                className={({ isActive }) =>
+                  `text-4xl font-semibold transition-colors hover:text-foreground/80 ${
+                    isActive ? "text-foreground" : "text-foreground/70"
+                  }`
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </nav>
+        </div>
       </div>
-    </nav>
+    </>
   );
 };
 
