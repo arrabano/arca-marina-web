@@ -1,12 +1,37 @@
 import { NavLink } from "react-router-dom";
-import { X } from "lucide-react";
 import { memo, useCallback, useState } from "react";
 import logo from "@/assets/arca-marina-logo.png";
 
-const TwoLineIcon = () => (
+const TwoLineIcon = ({ isOpen }: { isOpen: boolean }) => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <line x1="4" y1="8" x2="20" y2="8" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-    <line x1="4" y1="16" x2="20" y2="16" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+    <line 
+      x1="4" 
+      y1="12" 
+      x2="20" 
+      y2="12" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round"
+      style={{
+        transform: isOpen ? 'rotate(45deg)' : 'translateY(-4px)',
+        transformOrigin: 'center',
+        transition: 'transform 0.3s ease-out'
+      }}
+    />
+    <line 
+      x1="4" 
+      y1="12" 
+      x2="20" 
+      y2="12" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round"
+      style={{
+        transform: isOpen ? 'rotate(-45deg)' : 'translateY(4px)',
+        transformOrigin: 'center',
+        transition: 'transform 0.3s ease-out'
+      }}
+    />
   </svg>
 );
 
@@ -71,7 +96,7 @@ const Navbar = () => {
             className="md:hidden p-2 text-white hover:text-white/80 transition-colors"
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <TwoLineIcon />}
+            <TwoLineIcon isOpen={isOpen} />
           </button>
         </div>
 
