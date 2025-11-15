@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { memo, useCallback, useState } from "react";
 import logo from "@/assets/arca-marina-logo.png";
+import heroPoster from "/hero-poster.jpg";
 
 const TwoLineIcon = ({ isOpen }: { isOpen: boolean }) => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -105,12 +106,19 @@ const Navbar = () => {
 
       {/* Full-Screen Mobile Navigation */}
       <div
-        className={`fixed inset-0 bg-background z-40 md:hidden transition-transform duration-500 ease-out ${
+        className={`fixed inset-0 z-40 md:hidden transition-transform duration-500 ease-out ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
-        style={{ paddingTop: "5rem" }}
+        style={{
+          paddingTop: "5rem",
+          backgroundImage: `url(${heroPoster})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "blur(0px)",
+        }}
       >
-        <div className="container mx-auto px-8 h-full flex flex-col justify-start pt-12">
+        <div className="absolute inset-0 backdrop-blur-[40px] bg-black/50" />
+        <div className="container mx-auto px-8 h-full flex flex-col justify-start pt-12 relative z-10">
           <nav className="flex flex-col space-y-8">
             {NAV_LINKS.map((link) => (
               <NavLink
@@ -119,8 +127,8 @@ const Navbar = () => {
                 end={link.to === "/"}
                 onClick={handleClose}
                 className={({ isActive }) =>
-                  `text-4xl font-semibold transition-colors hover:text-foreground/80 ${
-                    isActive ? "text-foreground" : "text-foreground/70"
+                  `text-4xl font-semibold transition-colors hover:text-white/80 ${
+                    isActive ? "text-[hsl(var(--brand-blue))]" : "text-white"
                   }`
                 }
               >
