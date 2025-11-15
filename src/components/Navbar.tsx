@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { memo, useCallback, useState } from "react";
+import { memo, useCallback, useState, useEffect } from "react";
 import logo from "@/assets/arca-marina-logo.png";
 import heroPoster from "/hero-poster.jpg";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const TwoLineIcon = ({ isOpen }: { isOpen: boolean }) => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,13 +56,32 @@ const Navbar = () => {
     setIsOpen(false);
   }, []);
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   return (
     <>
-      <nav className="fixed top-0 w-full bg-black/30 backdrop-blur-md border-b border-white/10 z-50">
+      <nav 
+        className={`fixed top-0 w-full border-b z-50 transition-all duration-500 ${
+          isOpen 
+            ? "bg-transparent border-transparent" 
+            : "bg-black/30 backdrop-blur-md border-white/10"
+        }`}
+      >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <NavLink to="/" className="flex items-center hover:opacity-80 transition-opacity">
+            <NavLink to="/" className="flex items-center hover:opacity-80 transition-opacity relative z-[60]">
               <div className="h-14 w-40 md:h-16 md:w-44 flex items-center">
                 <img
                   src={logo}
@@ -95,7 +115,7 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={handleToggle}
-              className="md:hidden p-2 text-white hover:text-white/80 transition-colors z-[60]"
+              className="md:hidden p-2 text-white hover:text-white/80 transition-colors relative z-[60]"
               aria-label="Toggle menu"
             >
               <TwoLineIcon isOpen={isOpen} />
@@ -110,33 +130,34 @@ const Navbar = () => {
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
         style={{
-          paddingTop: "5rem",
           backgroundImage: `url(${heroPoster})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          filter: "blur(0px)",
+          filter: "grayscale(100%)",
         }}
       >
         <div className="absolute inset-0 backdrop-blur-[40px] bg-black/50" />
-        <div className="container mx-auto px-8 h-full flex flex-col justify-start pt-12 relative z-10">
-          <nav className="flex flex-col space-y-8">
-            {NAV_LINKS.map((link) => (
-              <NavLink
-                key={link.to}
-                to={link.to}
-                end={link.to === "/"}
-                onClick={handleClose}
-                className={({ isActive }) =>
-                  `text-4xl font-semibold transition-colors hover:text-white/80 ${
-                    isActive ? "text-[hsl(var(--brand-blue))]" : "text-white"
-                  }`
-                }
-              >
-                {link.label}
-              </NavLink>
-            ))}
-          </nav>
-        </div>
+        <ScrollArea className="h-full w-full">
+          <div className="container mx-auto px-8 pt-28 pb-12 relative z-10">
+            <nav className="flex flex-col space-y-8">
+              {NAV_LINKS.map((link) => (
+                <NavLink
+                  key={link.to}
+                  to={link.to}
+                  end={link.to === "/"}
+                  onClick={handleClose}
+                  className={({ isActive }) =>
+                    `text-4xl font-semibold transition-colors hover:text-white/80 ${
+                      isActive ? "text-[hsl(var(--brand-blue))]" : "text-white"
+                    }`
+                  }
+                >
+                  {link.label}
+                </NavLink>
+              ))}
+            </nav>
+          </div>
+        </ScrollArea>
       </div>
     </>
   );
