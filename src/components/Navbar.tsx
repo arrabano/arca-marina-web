@@ -148,9 +148,14 @@ const Navbar = () => {
                   onClick={handleClose}
                   className={({ isActive }) =>
                     `text-4xl font-semibold transition-colors hover:text-white/80 ${
-                      isActive ? "text-[hsl(var(--brand-blue))]" : "text-white"
+                      isActive ? "text-brand-blue" : "text-white"
                     }`
                   }
+                  style={{
+                    WebkitTapHighlightColor: 'transparent',
+                    WebkitTouchCallout: 'none',
+                    userSelect: 'none',
+                  }}
                 >
                   {link.label}
                 </NavLink>
