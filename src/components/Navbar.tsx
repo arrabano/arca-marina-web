@@ -132,13 +132,18 @@ const Navbar = () => {
         className={`fixed inset-0 z-40 md:hidden transition-transform duration-500 ease-out ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
-        style={{
-          backgroundImage: `url(${heroPoster})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "grayscale(100%)",
-        }}
       >
+        {/* Background image layer (grayscale only) */}
+        <div
+          className="absolute inset-0 -z-10 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${heroPoster})`,
+            WebkitFilter: 'grayscale(100%)',
+            filter: 'grayscale(100%)',
+          }}
+          aria-hidden="true"
+        />
+        {/* Blur and dark overlay on top of background */}
         <div className="absolute inset-0 backdrop-blur-[40px] bg-black/50" />
         <ScrollArea className="h-full w-full">
           <div className="container mx-auto px-8 pt-28 pb-12 relative z-10">
