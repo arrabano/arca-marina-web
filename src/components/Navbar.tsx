@@ -56,16 +56,19 @@ const Navbar = () => {
     setIsOpen(false);
   }, []);
 
-  // Lock body scroll when menu is open
+  // Lock body scroll when menu is open (force with !important)
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.setProperty('overflow', 'hidden', 'important');
+      document.documentElement.style.setProperty('overflow', 'hidden', 'important');
     } else {
-      document.body.style.overflow = '';
+      document.body.style.removeProperty('overflow');
+      document.documentElement.style.removeProperty('overflow');
     }
     
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.removeProperty('overflow');
+      document.documentElement.style.removeProperty('overflow');
     };
   }, [isOpen]);
 
@@ -139,7 +142,14 @@ const Navbar = () => {
         <div className="absolute inset-0 backdrop-blur-[40px] bg-black/50" />
         <ScrollArea className="h-full w-full">
           <div className="container mx-auto px-8 pt-28 pb-12 relative z-10">
-            <nav className="flex flex-col space-y-8">
+            <nav
+              className="flex flex-col space-y-8 select-none"
+              style={{
+                WebkitTapHighlightColor: 'transparent',
+                WebkitTouchCallout: 'none',
+                userSelect: 'none',
+              }}
+            >
               {NAV_LINKS.map((link) => (
                 <NavLink
                   key={link.to}
@@ -147,8 +157,8 @@ const Navbar = () => {
                   end={link.to === "/"}
                   onClick={handleClose}
                   className={({ isActive }) =>
-                    `text-4xl font-semibold transition-colors hover:text-white/80 ${
-                      isActive ? "text-brand-blue" : "text-white"
+                    `text-4xl font-semibold transition-colors hover:text-white/80 bg-transparent focus:bg-transparent active:bg-transparent outline-none ring-0 appearance-none select-none ${
+                      isActive ? "!text-brand-blue" : "text-white"
                     }`
                   }
                   style={{
