@@ -130,9 +130,9 @@ const Home = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
             Join our network of satisfied clients worldwide and experience the Arca Marina difference
           </p>
-          <Button asChild size="lg" variant="secondary" className="text-lg">
+          <Button asChild size="lg" variant="brand-filled" className="text-lg rounded-full px-8">
             <Link to="/contact">
-              Get in Touch <ArrowRight className="ml-2" />
+              Get in Touch
             </Link>
           </Button>
         </div>
