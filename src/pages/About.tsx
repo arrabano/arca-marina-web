@@ -61,7 +61,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 relative overflow-hidden">
+      <section className="py-32 relative overflow-hidden">
         {/* Wave Pattern Background */}
         <img
           src={valuesWaveBackground}
@@ -71,8 +71,8 @@ const About = () => {
         />
         
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-20">Our Values</h2>
+          <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto px-8">
             <div className="text-center p-6 bg-background rounded-lg">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                 <Shield className="w-8 h-8 text-primary" />
