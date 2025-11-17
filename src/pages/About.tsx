@@ -63,7 +63,7 @@ const About = () => {
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center p-6 bg-background rounded-lg">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                 <Shield className="w-8 h-8 text-primary" />
@@ -94,15 +94,6 @@ const About = () => {
               </p>
             </div>
 
-            <div className="text-center p-6 bg-background rounded-lg">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                <Users className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Expertise</h3>
-              <p className="text-muted-foreground">
-                Team expertise from across the globe
-              </p>
-            </div>
           </div>
         </div>
       </section>
