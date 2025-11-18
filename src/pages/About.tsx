@@ -61,7 +61,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-48 relative overflow-hidden">
         {/* Wave Pattern Background */}
         <img
           src={valuesWaveBackground}
