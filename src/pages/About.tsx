@@ -1,6 +1,6 @@
 import { Award, Globe, Shield, Users } from "lucide-react";
 import coastalLandscape from "@/assets/coastal-landscape.jpg";
-import valuesWaveBackground from "@/assets/values-wave-background-grey.png";
+import valuesWaveBackground from "@/assets/values-wave-background.png";
 
 const About = () => {
   return (
@@ -79,7 +79,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-48 relative overflow-hidden">
+      <section className="py-64 relative overflow-hidden">
         {/* Wave Pattern Background */}
         <img
           src={valuesWaveBackground}
