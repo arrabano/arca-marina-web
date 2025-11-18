@@ -1,6 +1,6 @@
 import { Award, Globe, Shield, Users } from "lucide-react";
 import coastalLandscape from "@/assets/coastal-landscape.jpg";
-import valuesWaveBackground from "@/assets/values-wave-background.png";
+import valuesWaveBackground from "@/assets/values-wave-background-grey.png";
 
 const About = () => {
   return (
